@@ -1,0 +1,9 @@
+Bazy Danych:
+Logowanie - Login, Has³o
+Rejestracja - Login, Has³o, E-mail
+Postaæ - Imiê, Nazwisko, P³eæ, Rasa, Historia, Zdjêcie, Broñ, Zbroja, Ekwipunek, Magia
+Poczekalnia - Pokoje, iloœæ osób, id bo¿a, has³o
+Pokoju - Profil postaci, Zdjêcie bo¿a, 
+Ekwipunek - Nazwa, Opis, Typ
+
+Typ: Przedmiot, Broñ, Zbroja, Specjalny, Konsumowalne

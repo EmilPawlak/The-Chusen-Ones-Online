@@ -1,0 +1,21 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #e60000; }
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 30% 40% 30%; }
+
+.container__form {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  background-color: #ff9900;
+  border: 0.25vw solid #e68a00; }
+
+/*# sourceMappingURL=style.css.map */
