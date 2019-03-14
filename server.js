@@ -10,7 +10,7 @@ const server = app.listen(7000, () => {
   console.log(`Express running → PORT ${server.address().port}`);
 }); //nasluchiwanie portu
 
-MongoClient.connect(url, (err, client) => {//połaczenie z bazą
+MongoClient.connect(url,{ useNewUrlParser: true }, (err, client) => {//połaczenie z bazą
     if (err) {
       console.error(err);
     }
@@ -33,14 +33,14 @@ MongoClient.connect(url, (err, client) => {//połaczenie z bazą
           var log = req.body.login;
           var pass = req.body.password;//przypisanie danych z formularza
 
-          collection.count({name:log}, function(err, result){
+          collection.countDocuments({name:log}, function(err, result){
             if(result){
                 var user = collection.findOne({name:log}, function(err, result){
                   if (err) {
                     console.error(err);
                   }
 
-                    console.log(result.name);// wyswietlenie zawartosci bazy
+                    //console.log(result.name);// wyswietlenie zawartosci bazy
 
                     if(result.password===pass)
                     {
