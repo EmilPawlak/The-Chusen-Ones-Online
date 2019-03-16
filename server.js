@@ -23,8 +23,13 @@ MongoClient.connect(url,{ useNewUrlParser: true }, (err, client) => {//połaczen
     app.use(express.static('public'));
 
     app.get('/', (req, res) => {
-      res.render('index'); // wyswietlenie htmla
+      res.render('index'); // wyswietlenie htmla indexa
     });
+
+    //app.get('/page2', (req, res) => {
+      //res.render('page2'); // wyswietlenie htmla page2
+    //});
+
 
     app.use(myParser.urlencoded({extended : true}));//<-do ogarniecia
 
@@ -46,7 +51,7 @@ MongoClient.connect(url,{ useNewUrlParser: true }, (err, client) => {//połaczen
                     {
                       console.log("Udało się zalogować");
                     } else {
-                      console.log("Błędne hasło");
+                        console.log("błedne hasło");
                     }
                 });
             } else {
@@ -54,6 +59,7 @@ MongoClient.connect(url,{ useNewUrlParser: true }, (err, client) => {//połaczen
             }
           });
         });
+
 })
 
 
