@@ -4,7 +4,7 @@
   "description": "online paper rpg ",
   "main": "index.js",
   "scripts": {
-    "start": "npx pm2 start server.js --watch"
+    "start": "node server.js"
   },
   "author": "Caed",
   "license": "ISC",
