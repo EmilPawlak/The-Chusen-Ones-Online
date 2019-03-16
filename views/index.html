@@ -6,16 +6,37 @@
     <link rel="stylesheet" href="../css/style.css" type="text/css">
   </head>
   <body>
-    <div class="container">
-      <form class="container__form" action="/" method="post">
-        Login:
-        <input id="login" type="text" name="login" value="" placeholder="Wybruniec">
-        <br>
-        <br>
-        Hasło:
-        <input id="password" type="password" name="password" value="" placeholder="Autystyś">
-        <input id="login_button" type="submit" name="button"/>
-      </form>
+    <div class="content">
+      <h1 class="content_title">The Chusen Ones Online</h1>
+        <div class="window" id="window">
+          <div class="window__welcome" id="window__welcome">
+            <h2 class="window__welcome--title">Witaj podróżniku</h2>
+            <button class="window__welcome--logInBtn" onclick="changeToLogin()">Zaloguj się</button>
+            <button class="window__welcome--registerBtn" onclick="changeToRegister()">Zarejestruj się</button>
+          </div>
+
+          <form class="window__logIn" id="window__logIn" action="/" method="post">
+            <h2 class="window__logIn--title">Logowanie</h2>
+            <p class="window__logIn--login">Login</p>
+            <input class="window__logIn--loginInput" id="login" type="text" name="login" placeholder="Wybruniec">
+            <p class="window__logIn--password">Hasło</p>
+            <input class="window__logIn--passwordInput" id="password" type="password" name="password" placeholder="Hasło">
+            <input class="window__logIn--submitInput" id="login_button" type="submit" name="button">
+          </form>
+
+          <form class="window__register" id="window__register" action="/" method="post">
+            <h2 class="window__register--title">Rejestracja</h2>
+            <p class="window__register--login">Login:</p>
+            <input class="window__register--loginInput" id="login" type="text" name="login" placeholder="Wybruniec">
+            <p class="window__register--password">Hasło:</p>
+            <input class="window__register--passwordInput"id="password" type="password" name="password" placeholder="Hasło">
+            <p class="window__register--email">E-mail</p>
+            <input class="window__register--emailInput" id="email" type="email" name="email" placeholder="E-mail">
+            <p class="window__register--termsAccept">Akceptuje Regulamin<input type="checkbox" name="" id=""></p>
+            <input class="window__register--submitInput" id="login_button" type="submit" name="button">
+          </form>
+        </div>
     </div>
+    <script src="../script.js"></script>
   </body>
 </html>
