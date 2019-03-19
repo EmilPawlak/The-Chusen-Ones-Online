@@ -32,13 +32,13 @@ MongoClient.connect(url,{ useNewUrlParser: true }, (err, client) => {//połaczen
 
     app.post("/", function(req, res) {
 
-          var log = req.body.login;
-          var pass = req.body.password;//przypisanie danych z formularza
+          var log = req.body.login_l;
+          var pass = req.body.password_l;//przypisanie danych z formularza
           var log_r = req.body.login_r;
           var pass_r = req.body.password_r;
           var email_r = req.body.email_r;
           var button_r=req.body.button_r;
-          var button=req.body.button;
+          var button=req.body.button_l;
 
           if(button=="zaloguj")
           {
@@ -63,7 +63,7 @@ MongoClient.connect(url,{ useNewUrlParser: true }, (err, client) => {//połaczen
                 }
           });
 
-        } else if(button_r=="rejestracja"){
+        } else if(button_r=="zarejestruj"){
 
           collection.countDocuments({name:log_r}, (err,result) => {
             if(result)
