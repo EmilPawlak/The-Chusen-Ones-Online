@@ -15,27 +15,27 @@
           <button class="window__welcome--registerBtn" onclick="changeToRegister()">Zarejestruj się</button>
         </div>
 
-          <form class="window__logIn" id="window__logIn" action="/" method="post">
-            <h2 class="window__logIn--title">Logowanie</h2>
-            <p class="window__logIn--login">Login</p>
-            <input class="window__logIn--loginInput" id="login" type="text" name="login" placeholder="Wybruniec">
-            <p class="window__logIn--password">Hasło</p>
-            <input class="window__logIn--passwordInput" id="password" type="password" name="password" placeholder="Hasło">
-            <input class="window__logIn--submitInput" id="login_button" type="submit" name="button" value="zaloguj">
-          </form>
+        <form class="window__logIn" id="window__logIn" action="/" method="post">
+          <h2 class="window__logIn--title">Logowanie</h2>
+          <p class="window__logIn--login">Login</p>
+          <input class="window__logIn--loginInput" id="login" type="text" name="login_l" placeholder="Wybruniec" required>
+          <p class="window__logIn--password">Hasło</p>
+          <input class="window__logIn--passwordInput" id="password" type="password" name="password_l" placeholder="Hasło" required>
+          <input class="window__logIn--submitInput" id="login_button" type="submit" name="button_l" required>
+        </form>
 
-          <form class="window__register" id="window__register" action="/" method="post">
-            <h2 class="window__register--title">Rejestracja</h2>
-            <p class="window__register--login">Login:</p>
-            <input class="window__register--loginInput" id="login" type="text" name="login_r" placeholder="Wybruniec">
-            <p class="window__register--password">Hasło:</p>
-            <input class="window__register--passwordInput"id="password" type="password" name="password_r" placeholder="Hasło">
-            <p class="window__register--email">E-mail</p>
-            <input class="window__register--emailInput" id="email" type="email" name="email_r" placeholder="E-mail">
-            <p class="window__register--termsAccept">Akceptuje Regulamin<input type="checkbox" name="" id=""></p>
-            <input class="window__register--submitInput" id="login_button" type="submit" name="button_r" value="rejestracja">
-          </form>
-        </div>
+        <form class="window__register" id="window__register" action="/" method="post">
+          <h2 class="window__register--title">Rejestracja</h2>
+          <p class="window__register--login">Login:</p>
+          <input class="window__register--loginInput" id="login" type="text" name="login_r" placeholder="Wybruniec" required>
+          <p class="window__register--password">Hasło:</p>
+          <input class="window__register--passwordInput"id="password" type="password" name="password_r" placeholder="Hasło" required>
+          <p class="window__register--email">E-mail</p>
+          <input class="window__register--emailInput" id="email" type="email" name="email_r" placeholder="E-mail" required>
+          <p class="window__register--termsAccept">Akceptuje Regulamin<input type="checkbox" name="checkbox_r" id=""></p>
+          <input class="window__register--submitInput" id="login_button" type="submit" name="button"  required>
+        </form>
+      </div>
     </div>
     <script src="../public/script.js"></script>
   </body>
