@@ -34,28 +34,50 @@ MongoClient.connect(url,{ useNewUrlParser: true }, (err, client) => {//połaczen
 
           var log = req.body.login;
           var pass = req.body.password;//przypisanie danych z formularza
+          var log_r = req.body.login_r;
+          var pass_r = req.body.password_r;
+          var email_r = req.body.email_r;
+          var button_r=req.body.button_r;
+          var button=req.body.button;
 
-          collection.countDocuments({name:log}, function(err, result){
-            if(result){
-                var user = collection.findOne({name:log}, function(err, result){
-                  if (err) {
-                    console.error(err);
-                  }
+          if(button=="zaloguj")
+          {
+            collection.countDocuments({name:log},(err, result) => {
+                if(result){
+                    var user = collection.findOne({name:log}, function(err, result){
+                      if (err) {
+                        console.error(err);
+                      }
 
-                    console.log(result.name);// wyswietlenie zawartosci bazy
+                        console.log(result.name);// wyswietlenie zawartosci bazy
 
-                    if(result.password===pass)
-                    {
-                      console.log("Udało się zalogować");
-                    } else {
-                      console.log("Błędne hasło");
-                    }
-                });
-            } else {
-              console.log("błędny login");
-            }
+                        if(result.password===pass)
+                        {
+                          console.log("Udało się zalogować");
+                        } else {
+                          console.log("Błędne hasło");
+                        }
+                    });
+                } else {
+                  console.log("błędny login");
+                }
           });
-        });
+
+        } else if(button_r=="rejestracja"){
+
+          collection.countDocuments({name:log_r}, (err,result) => {
+            if(result)
+            {
+              console.log("Taki uzytkownik istnieje");
+            }else
+            {
+              collection.insertOne({name: log_r, password: pass_r, email: email_r});
+            }
+
+          });
+          }
+
+    });
 })
 
 
