@@ -1,3 +1,3 @@
-# The-Chusen-Ones-Online
+# The Chusen Ones Online
 
-Web aplication created to play an original Dungeons and Dragons system Online.
+Web application created to play an real-life authorial Dungeons & Dragons system Online.
